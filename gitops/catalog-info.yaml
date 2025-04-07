@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: owmdx3xjb-python-gitops
+  description: This is GitOps manifest for owmdx3xjb-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=owmdx3xjb-python
+    backstage.io/kubernetes-id: owmdx3xjb-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: owmdx3xjb-python-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:owmdx3xjb-python
